@@ -20,10 +20,11 @@
 
   <div class="main">
     <h2>Firewall Rules for DMZ w/ Web Server</h2>
-    <p>DMZ -> LAN: ANY ANY ALLOW: Applications</p></br>
+    <p>DMZ -> LAN: [DMZ IPs] ANY ALLOW: Applications</p></br>
     <p>DMZ -> EXT: ANY ANY ALLOW: Web Browsing</p></br>
     <p>LAN -> LAN: ANY ANY ALLOW</p></br>
     <p>LAN -> EXT: ANY ANY ALLOW: Web Browsing<p></br>
+    <p>LAN -> EXT: ANY ANY DENY: P2P, torrent<p></br>
     <p>EXT -> LAN: ANY ANY DENY<p></br>
     <p>EXT -> DMZ: ANY ANY ALLOW: Web Browsing, Applications<p></br>
     <br>
