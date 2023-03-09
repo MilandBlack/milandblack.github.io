@@ -22,12 +22,12 @@
 
   <div class="main">
     <h2>Firewall Rules for DMZ w/ Web Server</h2>
-    <p>DMZ -> LAN: ANY ANY DENY</p></br>
-    <p>DMZ -> EXT: ANY ANY ALLOW: APP(WEB)</p></br>
+    <p>DMZ -> LAN: ANY ANY ALLOW: Applications</p></br>
+    <p>DMZ -> EXT: ANY ANY ALLOW: Web Browsing</p></br>
     <p>LAN -> LAN: ANY ANY ALLOW</p></br>
-    <p>LAN -> EXT: ANY ANY ALLOW<p></br>
+    <p>LAN -> EXT: ANY ANY ALLOW: Web Browsing<p></br>
     <p>EXT -> LAN: ANY ANY DENY<p></br>
-    <p>EXT -> DMZ: ANY ANY ALLOW: 80, 443<p></br>
+    <p>EXT -> DMZ: ANY ANY ALLOW: Web Browsing, Applications<p></br>
     <br>
     <p>Here is a link to the Access Control Rules Guide for Cisco Firepower <a href="https://www.cisco.com/c/en/us/td/docs/security/firepower/660/configuration/guide/fpmc-config-guide-v66/access_control_rules.html#ID-2190-0000021f" target="_blank" rel="noopener noreferrer">Cisco Firepower</a></p>
     <p>You can access the PDF <a href="programs/access_control_rules.pdf">here.</a></p>
