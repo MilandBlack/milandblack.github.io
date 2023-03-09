@@ -1,0 +1,112 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.bodyFill{
+    margin:0;
+    width:100%;
+}
+
+.menu {
+  background-color:#d5d5d5;
+  margin-top: 5px;
+  float:left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu p {
+  margin:0;
+  margin-left:2.5%;
+  width:95%;
+}
+
+.menu a {
+  background-color: #e5e5e5;
+  margin-left:2.5%;
+  margin-top:2px;
+  margin-bottom: 2px;
+  display: block;
+  width: 95%;
+  color: black;
+  text-decoration:none;
+}
+
+.menu a:hover{
+    background-color: rgba(240,0,0,.3);
+}
+
+.main {
+  float: left;
+  width: 60%;
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  margin-top: 5px;
+  text-align: center;
+}
+
+h1{
+  color:white;
+}
+
+h2{
+  padding: 5px;
+}
+
+p{
+  padding-left: 7px;
+}
+
+.tablepress thead {
+  background-color: #58161D;
+  color:white;
+  height:35px;
+}
+
+.column-1 {
+  width:20%;
+}
+
+.column-2 {
+  width:60%;
+}
+
+.column-3 {
+  width:20%;
+}
+
+.tablepress tr:nth-child(even) {
+  background-color: #e5e5e5;
+}
+
+.tablepress tr:hover{
+    background-color: rgba(240,0,0,.3);
+}
+
+.tablepress {
+    border-color: #ddd;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin: 0 auto 1rem;
+    table-layout: auto;
+    width: 100%;
+}
+
+.tablepress tr {
+  border-bottom: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 1120px) {
+  /* For mobile phones: */
+  .menu,.menu a, .main, .right {
+    width: 100%;
+  }
+}
+</style>

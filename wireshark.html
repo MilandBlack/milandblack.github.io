@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div style="background-color:#58161D;text-align:center;padding-top:15px;padding-bottom:15px;">
+  <h1>CCDC</h1>
+  <h2 style="color:white;">Collegiate Cyber Defense Competition</h2>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="firewall.html">Sample Firewall Rules</a>
+    <a href="nmap.html">Sample Nmap Scans</a>
+    <p><b>Windows Downloads</b></p>
+    <a href="programs/WS_Nmap_Installers.zip" download>Wireshark/Nmap</a>
+  </div>
+
+  <div class="main">
+    <h2>Wireshark Filters</h2>
+    <p>These filters are used to discover reconnaissance and attacks. The tables are labeled according to function and the command/tool being detected.</p>
+    <table id="table-1" class="tablepress">
+     <thead>
+      <tr>
+      <th class="column-1">Technique</th><th class="column-2">Host Enumeration Filters</th><th class="column-3">Command / Tool</th>
+      </tr>
+     </thead>
+     <tbody class="row-hover">
+      <tr class="row-2 even">
+      <td class="column-1"><strong>ARP scanning</strong></td><td class="column-2">arp.dst.hw_mac==00:00:00:00:00:00</td><td class="column-3">arp-scan -l</td>
+      </tr>
+      <tr class="row-3 odd">
+      <td class="column-1"><strong>IP protocol scan</strong></td><td class="column-2">icmp.type==3 and icmp.code==2</td><td class="column-3">nmap -sO &lt;target&gt;</td>
+      </tr>
+      <tr class="row-4 even">
+      <td class="column-1"><strong>ICMP ping sweep</strong></td><td class="column-2">icmp.type==8 or icmp.type==0</td><td class="column-3">nmap -sn -PE &lt;subnet&gt;</td>
+      </tr>
+      <tr class="row-5 odd">
+      <td class="column-1"><strong>TCP ping sweeps</strong></td><td class="column-2">tcp.dstport==7</td><td class="column-3">nmap -sn -PS/-PA &lt;subnet&gt;</td>
+      </tr>
+      <tr class="row-6 even">
+      <td class="column-1"><strong>UDP ping sweeps</strong></td><td class="column-2">udp.dstport==7</td><td class="column-3">nmap -sn -PU &lt;subnet&gt;</td>
+      </tr>
+      <tr class="row-7 odd">
+      <td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
+      </tr>
+      </tbody>
+      </table>
+      <table id="table-2" class="tablepress">
+      <thead>
+       <tr>
+        <th class="column-1">Technique</th><th class="column-2">Port Scanning Filters</th><th class="column-3">Command / Tool</th>
+       </tr>
+      </thead>
+      <tbody class="row-hover">
+       <tr class="row-2 even">
+       <td class="column-1"><strong>TCP SYN scan</strong></td><td class="column-2">tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size&lt;=1024</td><td class="column-3">nmap -sS &lt;target&gt;</td>
+       </tr>
+       <tr>
+       <td class="column-1"><strong>TCP Connect() scan</strong></td><td class="column-2">tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size&gt;1024</td><td class="column-3">nmap -sT &lt;target&gt;</td>
+       </tr>
+       <tr class="row-4 even">
+       <td class="column-1"><strong>TCP Null scan</strong></td><td class="column-2">tcp.flags==0</td><td class="column-3">nmap -sN &lt;target&gt;</td>
+       </tr>
+       <tr class="row-5 odd">
+       <td class="column-1"><strong>TCP FIN scan</strong></td><td class="column-2">tcp.flags==0x001</td><td class="column-3">nmap -sF &lt;target&gt;</td>
+       </tr>
+       <tr class="row-6 even">
+       <td class="column-1"><strong>TCP Xmass scan</strong></td><td class="column-2">tcp.flags.fin==1 &amp;&amp; tcp.flags.push==1 &amp;&amp; tcp.flags.urg==1</td><td class="column-3">nmap -sX &lt;target&gt;</td>
+       </tr>
+       <tr class="row-7 odd">
+       <td class="column-1"><strong>UDP port scan</strong></td><td class="column-2">icmp.type==3 and icmp.code==3</td><td class="column-3">nmap -sU &lt;target&gt;</td>
+       </tr>
+       <tr class="row-8 even">
+       <td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
+       </tr>
+      </tbody>
+     </table>
+	<table id="table-3" class="tablepress">
+		<thead>
+		<tr>
+		<th>Technique</th><th>Network Attack Filters</th><th>Command / Tool</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="row-2 even">
+		<td><strong>ARP poisoning</strong></td><td>arp.duplicate-address-detected or arp.duplicate-address-frame</td><td>arpspoof, ettercap</td>
+		</tr>
+		<tr class="row-3 odd">
+		<td class="column-1"><strong>ICMP flood</strong></td><td class="column-2">icmp and data.len &gt; 48</td><td class="column-3">fping, hping</td>
+		</tr>
+		<tr class="row-4 even">
+		<td class="column-1"><strong>VLAN hopping</strong></td><td class="column-2">dtp or vlan.too_many_tags</td><td class="column-3">frogger, yersinia</td>
+		</tr>
+		<tr class="row-5 odd">
+		<td class="column-1"><strong>Unexplained packet loss</strong></td><td class="column-2">tcp.analysis.lost_segment or tcp.analysis.retransmission</td><td class="column-3">n/a</td>
+		</tr>
+		<tr class="row-6 even">
+		<td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
+		</tr>
+		<tr class="row-7 odd">
+		<td class="column-1"><strong>[HTTP] Reflection</strong></td><td class="column-2">tcp.srcport == 80 or tcp.srcport == 443</td><td class="column-3">Port to variable protocol</td>
+		</tr>
+		</tbody>
+	</table>
+  </div>
+
+  <div class="right">
+    <h2>Prioritize!</h2>
+    <p>These steps should set you on a good path. After these steps are implemented, be sure to complete as many injections as possible
+	using the time alottments as a priority scale.</p>
+  </div>
+</div>
+
+</body>
+
+
+</html>
