@@ -46,9 +46,6 @@
       <tr class="row-6 even">
       <td class="column-1"><strong>UDP ping sweeps</strong></td><td class="column-2">udp.dstport==7</td><td class="column-3">nmap -sn -PU &lt;subnet&gt;</td>
       </tr>
-      <tr class="row-7 odd">
-      <td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
-      </tr>
       </tbody>
       </table>
       <table id="table-2" class="tablepress">
@@ -76,9 +73,6 @@
        <tr class="row-7 odd">
        <td class="column-1"><strong>UDP port scan</strong></td><td class="column-2">icmp.type==3 and icmp.code==3</td><td class="column-3">nmap -sU &lt;target&gt;</td>
        </tr>
-       <tr class="row-8 even">
-       <td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
-       </tr>
       </tbody>
      </table>
      <table id="table-3" class="tablepress">
@@ -101,9 +95,6 @@
 	    <td class="column-1"><strong>Unexplained packet loss</strong></td><td class="column-2">tcp.analysis.lost_segment or tcp.analysis.retransmission</td><td class="column-3">n/a</td>
 	  </tr>
 	  <tr class="row-6 even">
-	    <td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
-	  </tr>
-	  <tr class="row-7 odd">
 	    <td class="column-1"><strong>[HTTP] Reflection</strong></td><td class="column-2">tcp.srcport == 80 or tcp.srcport == 443</td><td class="column-3">Port to variable protocol</td>
 	  </tr>
 	</tbody>
