@@ -60,7 +60,7 @@
        <tr class="row-2 even">
        <td class="column-1"><strong>TCP SYN scan</strong></td><td class="column-2">tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size&lt;=1024</td><td class="column-3">nmap -sS &lt;target&gt;</td>
        </tr>
-       <tr>
+       <tr class="row-3 odd">
        <td class="column-1"><strong>TCP Connect() scan</strong></td><td class="column-2">tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size&gt;1024</td><td class="column-3">nmap -sT &lt;target&gt;</td>
        </tr>
        <tr class="row-4 even">
@@ -80,32 +80,32 @@
        </tr>
       </tbody>
      </table>
-	<table id="table-3" class="tablepress">
-		<thead>
-		<tr>
-		<th>Technique</th><th>Network Attack Filters</th><th>Command / Tool</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr class="row-2 even">
-		<td><strong>ARP poisoning</strong></td><td>arp.duplicate-address-detected or arp.duplicate-address-frame</td><td>arpspoof, ettercap</td>
-		</tr>
-		<tr class="row-3 odd">
-		<td class="column-1"><strong>ICMP flood</strong></td><td class="column-2">icmp and data.len &gt; 48</td><td class="column-3">fping, hping</td>
-		</tr>
-		<tr class="row-4 even">
-		<td class="column-1"><strong>VLAN hopping</strong></td><td class="column-2">dtp or vlan.too_many_tags</td><td class="column-3">frogger, yersinia</td>
-		</tr>
-		<tr class="row-5 odd">
-		<td class="column-1"><strong>Unexplained packet loss</strong></td><td class="column-2">tcp.analysis.lost_segment or tcp.analysis.retransmission</td><td class="column-3">n/a</td>
-		</tr>
-		<tr class="row-6 even">
-		<td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
-		</tr>
-		<tr class="row-7 odd">
-		<td class="column-1"><strong>[HTTP] Reflection</strong></td><td class="column-2">tcp.srcport == 80 or tcp.srcport == 443</td><td class="column-3">Port to variable protocol</td>
-		</tr>
-		</tbody>
+     <table id="table-3" class="tablepress">
+	<thead>
+	  <tr>
+	    <th>Technique</th><th>Network Attack Filters</th><th>Command / Tool</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr class="row-2 even">
+	    <td><strong>ARP poisoning</strong></td><td>arp.duplicate-address-detected or arp.duplicate-address-frame</td><td>arpspoof, ettercap</td>
+	  </tr>
+	  <tr class="row-3 odd">
+	    <td class="column-1"><strong>ICMP flood</strong></td><td class="column-2">icmp and data.len &gt; 48</td><td class="column-3">fping, hping</td>
+	  </tr>
+	  <tr class="row-4 even">
+	    <td class="column-1"><strong>VLAN hopping</strong></td><td class="column-2">dtp or vlan.too_many_tags</td><td class="column-3">frogger, yersinia</td>
+	  </tr>
+	  <tr class="row-5 odd">
+	    <td class="column-1"><strong>Unexplained packet loss</strong></td><td class="column-2">tcp.analysis.lost_segment or tcp.analysis.retransmission</td><td class="column-3">n/a</td>
+	  </tr>
+	  <tr class="row-6 even">
+	    <td class="column-1"></td><td class="column-2"></td><td class="column-3"></td>
+	  </tr>
+	  <tr class="row-7 odd">
+	    <td class="column-1"><strong>[HTTP] Reflection</strong></td><td class="column-2">tcp.srcport == 80 or tcp.srcport == 443</td><td class="column-3">Port to variable protocol</td>
+	  </tr>
+	</tbody>
 	</table>
   </div>
 
