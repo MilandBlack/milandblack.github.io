@@ -50,6 +50,14 @@
   text-align: center;
 }
 
+.left {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  margin-top: 5px;
+  text-align: center;
+}
+
 h1{
   color:white;
   padding: 0px;
