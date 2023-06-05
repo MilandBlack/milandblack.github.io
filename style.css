@@ -51,7 +51,12 @@
 }
 
 .left {
-  display:inline;
+  float: left;
+  width: 20%;
+  margin-top: 5px;
+}
+
+.bottom {
   background-color: #e5e5e5;
   float: left;
   width: 20%;
