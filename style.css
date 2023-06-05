@@ -37,6 +37,11 @@
     background-color: rgba(0,85,165,.3);
 }
 
+.mainA {
+  float: left;
+  width: 80%;
+}
+
 .main {
   float: left;
   width: 60%;
@@ -121,7 +126,7 @@ p{
 
 @media only screen and (max-width: 1120px) {
   /* For mobile phones: */
-  .left, .main, .right, .bottom {
+  .left, .main, .mainA, .right, .bottom {
     width: 100%;
   }
 }
