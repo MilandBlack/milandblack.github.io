@@ -121,7 +121,7 @@ p{
 
 @media only screen and (max-width: 1120px) {
   /* For mobile phones: */
-  .menu,.menu a, .main, .right {
+  .left, .main, .right, .bottom {
     width: 100%;
   }
 }
