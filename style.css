@@ -69,11 +69,6 @@
   text-align: center;
 }
 
-.certs{
-  data-iframe-width:150;
-  data-iframe-height:270;
-}
-
 h1{
   color:white;
   padding: 0px;
@@ -133,10 +128,6 @@ p{
   /* For mobile phones: */
   .left, .main, .mainA, .right, .bottom {
     width: 100%;
-  }
-  .certs{
-    data-iframe-width:200;
-    data-iframe-height:200;
   }
 }
 </style>
