@@ -70,8 +70,8 @@
 }
 
 .certs{
-  width:150px;
-  height:270px;
+  data-iframe-width:150;
+  data-iframe-height:270;
 }
 
 h1{
@@ -135,8 +135,8 @@ p{
     width: 100%;
   }
   .certs{
-    data-iframe-width:100%;
-    data-iframe-height:150px;
+    data-iframe-width:200;
+    data-iframe-height:200;
   }
 }
 </style>
