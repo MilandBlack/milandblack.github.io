@@ -34,7 +34,8 @@
 }
 
 .menu a:hover{
-    background-color: rgba(0,85,165,.3);
+    background-color: rgba(0,85,165);
+    color: white;
 }
 
 .mainA {
@@ -84,7 +85,7 @@ p{
 }
 
 .tablepress thead {
-  background-color: #004595;
+  background-color: rgb(0,85,165);
   color:white;
   height:35px;
 }
