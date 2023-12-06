@@ -6,17 +6,16 @@
 <body>
 <script>
 function myFunction() {
+  const audio = new Audio("rikrol.MP3");
   alert("You are a Winner! You are the 4th claimant!");
+  audio.play();
 }
 </script>
-<div>
-  <a onload="myFunction()" href="index.html"><img src="congrats.png" alt="Congrats" style="width:100%"></a>
-  <a href="index.html"><img src="goldps5.png" alt="PS5" style="height:300"></a>
+<div style="text-align: center;">
+  <a onclick="myFunction()"><img src="congrats.png" alt="Congrats" style="width:100%"></a>
+  <h2>Click the PS5 to see if you won!</h2>
+  <a onclick="myFunction()"><img src="goldps5.png" alt="PS5" style="height:100"></a>
 </div>
-
-<audio id="playRikRoll" autoplay>
-  <source src="rikrol.MP3">
-</audio>
   
 </body>
 
