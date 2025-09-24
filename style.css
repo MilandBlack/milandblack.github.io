@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 473px){
+@media (min-width: 473px){
     #logo{
       float:left;
       height:140px;
@@ -160,5 +160,6 @@ p{
   }
 }
 </style>
+
 
 
