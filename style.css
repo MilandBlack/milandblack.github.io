@@ -5,7 +5,10 @@
 
 @media (max-width: 473px){
     #logo{
-      padding: 15px;
+      float:left;
+      height:140px;
+      padding-left: 15px;
+      display:inline-block;
     }
 
     .header{
@@ -13,23 +16,19 @@
       text-align:center;
       padding-top:15px;
       padding-bottom:15px;
-      height:auto;
+      height:140px;
     }
 }
-
 #logo{
-    float:left;
-    height:140px;
-    padding-left: 15px;
-    display:inline-block;
-}
+    padding: 15px;
+  }
 
 .header{
     background-color:rgb(0,85,165);
     text-align:center;
     padding-top:15px;
     padding-bottom:15px;
-    height:140px;
+    height:auto;
 }
 
 .bodyFill{
@@ -161,4 +160,5 @@ p{
   }
 }
 </style>
+
 
