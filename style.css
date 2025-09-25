@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 473px){
+@media (min-width: 650px){
     #logo{
       float:left;
       height:140px;
@@ -12,6 +12,8 @@
       display:inline-block;
     }
 
+    ul.topnav li {float: left;}
+
     .header{
       background-color:rgb(0,85,165);
       padding-top:15px;
@@ -19,11 +21,14 @@
       height:140px;
     }
 }
-@media (max-width: 473px){
+@media (max-width: 650px){
     #logo{
         padding: 15px;
     }
     
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+
     .header{
         background-color:rgb(0,85,165);
         text-align:center;
@@ -33,74 +38,44 @@
     }
 }
 
+ul.topnav {
+  border-top: 2px solid #0000b5;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0055A5;
+}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover {
+  background-color: #FFF; 
+  color:#0055A5; 
+  font-weight:bold;
+}
+
 .bodyFill{
     margin:0;
     width:100%;
 }
 
-.menu {
-  background-color:rgb(0,85,165);
-  width:100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 5px;
-  float:left;
-  text-align: center;
-}
-
-.menu p {
-  margin:1px;
-  margin-left:2.5%;
-  width:95%;
-}
-
-.menu a {
-  background-color: #fff;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left:2.5%;
-  margin-top:2px;
-  margin-bottom: 2px;
-  display: block;
-  width: 95%;
-  color: black;
-  text-decoration:none;
-}
-
-.menu a:hover{
-    background-color: rgb(0,85,165);
-    color: white;
-}
-
-.mainA {
-  float: left;
-  width: 80%;
-}
-
 .main {
   float: left;
-  width: 60%;
-}
-
-.right {
-  background-color: #e5e5e5;
-  float: left;
-  width: 20%;
-  margin-top: 5px;
-  text-align: center;
 }
 
 .left {
   float: left;
   width: 20%;
   margin-top: 5px;
-}
-
-.bottom {
   background-color: #e5e5e5;
-  float: left;
-  width:100%;
-  margin-top: 5px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -119,53 +94,11 @@ p{
   padding-left: 7px;
 }
 
-.tablepress thead {
-  background-color: rgb(0,85,165);
-  color:white;
-  height:35px;
-}
-
-.column-1 {
-  width:20%;
-}
-
-.column-2 {
-  width:60%;
-}
-
-.column-3 {
-  width:20%;
-}
-
-.tablepress tr:nth-child(even) {
-  background-color: #e5e5e5;
-}
-
-.tablepress tr:hover{
-    background-color: rgba(0,85,165,.3);
-}
-
-.tablepress {
-    border-color: #ddd;
-    border: none;
-    border-collapse: collapse;
-    border-spacing: 0;
-    clear: both;
-    margin: 0 auto 1rem;
-    table-layout: auto;
-    width: 100%;
-}
-
-.tablepress tr {
-  border-bottom: 1px solid #ddd;
-}
-
 table{
   margin-top: 5px; 
   margin-bottom: 5px;
   margin-left: 5px; 
   border-collapse: collapse; 
-  width: 80%; 
   height: 112px; 
   background-color: #ecf0f1; 
   border-color: #000000; 
@@ -174,7 +107,7 @@ table{
 
 @media only screen and (max-width: 1120px) {
   /* For mobile phones: */
-  .left, .main, .mainA, .right, .bottom {
+  .left, .main, .mainA, .right {
     width: 100%;
   }
   table{
@@ -183,8 +116,6 @@ table{
   }
 }
 </style>
-
-
 
 
 
