@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="style.css">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
 <body>
 
 <div class="header">
@@ -15,8 +18,7 @@
 </div>
 
 <ul class="topnav">
-  <li><a href="https://calendly.com/cmnw-lccc/assist" target="_blank">Schedule a Meeting</a>
-</li>
+  <li><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cmnw-lccc/assist'});return false;">Schedule a Meeting</a></li>
   <li><a href="https://canvas.lorainccc.edu/" target="_blank">LCCC Canvas</a></li>
   <li><a href="https://www.lorainccc.edu" target="_blank">LorainCCC.edu</a></li>
   <li><a href="https://www.linkedin.com/in/miland-black/" target="_blank">My LinkedIn Profile</a></li>
@@ -61,8 +63,11 @@
                 <tr style="height: 28px;">
                     <td style="width: 19.5244%; text-align: center; height: 28px;">Saturday</td>
                     <td style="width: 22.736%; text-align: center; height: 28px;">9 AM - Noon</td>
-                    <td style="width: 57.6446%; text-align: center; height: 28px;">By appointment (<a class="inline_disabled" href="https://calendly.com/cmnw-lccc/assist" target="_blank" rel="noopener">Click to Schedule</a> for WebEx or Zoom)</td>
-                </tr>
+                    <td style="width: 57.6446%; text-align: center; height: 28px;">
+						<a style="text-decoration:none;" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cmnw-lccc/assist'});return false;">
+						Click for Appointment (WebEx or Zoom)</a>
+					</td>
+				</tr>
             </tbody>
     </table>
     <h2>Certifications</h2>
